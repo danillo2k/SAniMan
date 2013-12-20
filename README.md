@@ -1,0 +1,4 @@
+SAniMan
+=======
+
+Simple Animation Manager
