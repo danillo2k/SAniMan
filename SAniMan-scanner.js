@@ -110,7 +110,6 @@ AnimationScanner.prototype.animate = function () {
 	animateScanner.enqueue(this.scannedQueue).animate();
 };
 
-
 /*
 	getAttributes: stackoverflow: gilly3
 	getAttributes: stackoverflow: kevinfahy
