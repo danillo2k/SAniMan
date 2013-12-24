@@ -18,35 +18,35 @@
 		<script>
 
 			var peanuts = new AnimationManager();
-			var whatever = document.getElementById("whatever");
+			var whatever = document.querySelectorAll(".whatever")[0];
 
 			var array = [
 			{
-				el: document.querySelectorAll(".whatever")[0], 
+				el: whatever, 
 				effect: 'lightSpeedIn', 
 				reverse: true, 
 				useTransition: true 
 			},
 				{
-				el: document.querySelectorAll(".whatever")[0],  
+				el: whatever,  
 				effect: 'rollOut', 
 				reverse: true, 
 				useTransition: true, 
 			},
 			{
-				el: document.querySelectorAll(".whatever")[0], 
+				el: whatever, 
 				effect: 'tada', 
 				reverse: true, 
 				useTransition: true 
 			},
 			{
-				el: document.querySelectorAll(".whatever")[0],  
+				el: whatever,  
 				effect: 'wobble', 
 				reverse: true, 
 				useTransition: true, 
 			},
 			{
-				el: document.querySelectorAll(".whatever")[0],  
+				el: whatever,  
 				effect: 'fadeInLeft', 
 				reverse: true, 
 				useTransition: true, 
@@ -56,7 +56,7 @@
 			var effects = ['flash', 'bounce', 'tada', 'swing', 'pulse', 'flipInY', 'wobble', 'fipOutY', 'fadeInUp', 'fadeInLeft', 'wobble', 'rollIn', 'rollOut']
 
 			obj = {
-				el: document.querySelectorAll(".whatever")[0],  
+				el: whatever,  
 				effect: 'fadeInLeft', 
 				reverse: true, 
 				useTransition: true, 
