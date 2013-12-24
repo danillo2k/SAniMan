@@ -128,4 +128,4 @@ whatever.animate();
 ```
 
 * time not used yet, but it can easily be added.
-* didn't do any optimisation,for scanner
+* didn't do any optimisation,for scanner.
