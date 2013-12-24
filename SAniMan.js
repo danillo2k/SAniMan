@@ -129,9 +129,6 @@ AnimationManager.prototype.dequeue = function(options){
 	return item;
 };
 
-var start = new AnimationManager();
-start.enqueue(array).animate();
-
 
 /*
 	Queue idea by: Stephen Morley 
