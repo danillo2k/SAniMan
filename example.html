@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="animate.css">
+		<script src="SAniMan-.js"></script>
+		<style>
+			.whatever img {
+				height:50px;
+				width:50px;
+			}
+		 </style>
+	<head>
+	<body>
+		<section>
+				<div id="whatever" class="whatever">
+						<img src="http://clipartist.info/RSS/openclipart.org/2011/April/20-Wednesday/circle_with_central_point_circle_with_central_point-999px.png">
+				</div>
+		</section>
+		<script>
+
+			var peanuts = new AnimationManager();
+			var whatever = document.getElementById("whatever");
+
+			var array = [
+			{
+				el: document.querySelectorAll(".whatever")[0], 
+				effect: 'lightSpeedIn', 
+				reverse: true, 
+				useTransition: true 
+			},
+				{
+				el: document.querySelectorAll(".whatever")[0],  
+				effect: 'rollOut', 
+				reverse: true, 
+				useTransition: true, 
+			},
+			{
+				el: document.querySelectorAll(".whatever")[0], 
+				effect: 'tada', 
+				reverse: true, 
+				useTransition: true 
+			},
+			{
+				el: document.querySelectorAll(".whatever")[0],  
+				effect: 'wobble', 
+				reverse: true, 
+				useTransition: true, 
+			},
+			{
+				el: document.querySelectorAll(".whatever")[0],  
+				effect: 'fadeInLeft', 
+				reverse: true, 
+				useTransition: true, 
+			}
+			];
+
+			var effects = ['flash', 'bounce', 'tada', 'swing', 'pulse', 'flipInY', 'wobble', 'fipOutY', 'fadeInUp', 'fadeInLeft', 'wobble', 'rollIn', 'rollOut']
+
+			obj = {
+				el: document.querySelectorAll(".whatever")[1],  
+				effect: 'fadeInLeft', 
+				reverse: true, 
+				useTransition: true, 
+			}
+
+			whatever.onclick = function() { 
+				obj.effect = effects[Math.floor(Math.random() * effects.length)];
+				peanuts.enqueue(obj).enqueue(array).animate();
+			}
+
+		</script>
+	</body>
+</html>
