@@ -26,12 +26,12 @@ AnimationManager.prototype.animate = function () {
 
 		// init
 		options.effect = (options.effect)? options.effect : this.defaults.EFFECT;
-		options.reverseAnimation = (options.reverse) ? 'reverse' : '';
-		options.animationType = (options.useransition) ? options.useTransition : this.defaults.USE_TRANSITION;
+		options.reverse = (options.reverse) ? 'reverse' : '';
+		options.useTransition = (options.useTransition) ? options.useTransition : this.defaults.USE_TRANSITION;
 		options.detectedTransitionEnd = this.detectTransitionEnd(options);
 
 		// start
-		options.animationType = (options.useransition)? options.useTransition : this.defaults.USE_TRANSITION;
+		options.useTransition = (options.useTransition)? options.useTransition : this.defaults.USE_TRANSITION;
 
 		// add
 		if(!options.concurrent){
@@ -79,7 +79,7 @@ AnimationManager.prototype.detectTransitionEnd = function (options) {
 	var transitions;
 	var el = document.createElement('transitionEndEl');
 
-	if (options.animationType === 'transition') {
+	if (options.useTransition === 'transition') {
 		transitions = {
 			'WebkitTransition':'webkitTransitionEnd',
 			'MozTransition':'transitionend',
@@ -120,7 +120,9 @@ AnimationManager.prototype.pushArray = function (given_array) {
 };
 
 AnimationManager.prototype.dequeue = function(options){
-	if (this.queue.length === 0) return undefined;
+	if (this.queue.length === 0) {
+		return undefined;
+	}
 	var item = this.queue[0];
 	this.queue = this.queue.slice(1, this.queue.length);
 
