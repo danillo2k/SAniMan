@@ -129,6 +129,7 @@ AnimationManager.prototype.dequeue = function(options){
 	return item;
 };
 
+
 /*
 	Queue idea by: Stephen Morley 
 	transition detection by: Modernizr
